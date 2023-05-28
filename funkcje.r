@@ -3,7 +3,7 @@ count_statistics <- function(column) {
   c_median <- median(column)
   c_min <- min(column)
   c_max <- max(column)
-  c_quantiles <- quantile(column) # default: probs = seq(0, 1, 0.25)
+  c_quantiles <- quantile(column,  probs = seq(0, 1, 0.25)) # default: probs = seq(0, 1, 0.25)
   #print(c_quantiles)
   c_mode <- get_domination(column)
   c_variance <- var(column) # populacji, czy próby
@@ -28,9 +28,3 @@ get_domination <- function(v) {
   uniqv[which.max(tabulate(match(v, uniqv)))]
 }
 
-
-draw_histogram <- function(column, title = "", xlabel="", ylabel = "Liczba osób") {
-  if (title == "")
-      title = xlabel
-  hist(column, main = paste("Histogram: ", title), xlab = xlabel, ylab = ylabel)
-}
