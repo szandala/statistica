@@ -39,3 +39,9 @@ draw_bar <- function (columnX, columnY, title = "", xlabel="", ylabel = "Liczba 
           main = paste("Wykres: ", title), xlab = xlabel, ylab = ylabel)
   
 }
+draw_pie <- function (columnX, labels, title = "") {
+
+  pie(columnX,  main = paste("Wykres: ", title))
+
+  
+}

@@ -17,3 +17,7 @@ draw_box(loans_data$ApplicantIncome, xlabel = "Dochód aplikanta", ylabel="Doch�
 draw_density(loans_data$ApplicantIncome, xlabel = "Dochód aplikanta")
 
 get_outliers(loans_data$ApplicantIncome)
+table(loans_data$Property_Area)
+loans_data$Property_Area = as.factor(loans_data$Property_Area)
+draw_pie(table(loans_data$Property_Area))
+summary(loans_data)

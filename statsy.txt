@@ -1,0 +1,11 @@
+wykresy pudełko-wąsy podzielić wg innych zmiennych
+
+odciąć outlierów o ile to możliwe 
+
+ANOVA, regrsja liniowa - inna?
+
+sprawdzić, czy model regresji jest poprawny
+PCA zrobić :D
+
+funkcja gęstości - dołożyć 
+
