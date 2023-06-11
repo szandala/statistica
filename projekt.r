@@ -3,7 +3,11 @@ source(paste(WHERE, "funkcje.r", sep=""))
 source(paste(WHERE, "drawings.r", sep=""))
 source(paste(WHERE, "outliers.r", sep=""))
 
-loans_data <- read.csv(paste(WHERE, "loan_sanction_train.csv", sep=""))
+loans_data <- read.csv(paste(WHERE, "loan_sanction_train.csv", sep=""), colClasses = c(
+    "character","factor","factor","factor","factor",
+    "factor","integer","integer",
+    "integer","integer","factor",
+    "factor","factor"))
 loans_data <- read.csv(paste(WHERE, "loan_sanction_train.csv", sep=""))
 
 count_statistics(loans_data$ApplicantIncome)
